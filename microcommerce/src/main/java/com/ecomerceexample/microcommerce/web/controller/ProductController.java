@@ -30,6 +30,6 @@ public class ProductController {
 	@GetMapping(value = "Product/{id}")
 	public Product printAProduct(@PathVariable int id) {
 		// We have not yet a data base so we return a new product
-		return new Product(id, "Head and Shoulders", 7);
+		return productDao.findProductById(id);
 	}	
 }
