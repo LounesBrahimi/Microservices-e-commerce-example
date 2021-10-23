@@ -1,10 +1,21 @@
 package com.ecomerceexample.microcommerce.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Product {
 
+	@Id
+	@GeneratedValue
 	private int id;
 	private String name;
 	private int price;
+	
+	public Product() {
+		
+	}
 	
 	public Product(int id, String name, int price) {
 		this.id = id;
